@@ -30,19 +30,31 @@ function Computers() {
 
   // 🔥 FIX: apply screen texture AFTER model loads
   useEffect(() => {
-    const texture = new THREE.TextureLoader().load(
-      '/desktop_pc/textures/Material.074_9_emissive.png'
-    )
+  const texture = new THREE.TextureLoader().load(
+    '/desktop_pc/textures/Material.074_9_emissive.png'
+  )
 
-    computer.scene.traverse((child) => {
-      if (child.isMesh) {
-        // apply to ALL meshes (safe fallback)
-        child.material.emissiveMap = texture
+  computer.scene.traverse((child) => {
+    if (child.isMesh) {
+
+      // 🔥 ONLY apply to screen-like meshes
+      if (
+        child.material &&
+        (
+          child.material.name.includes("074_9") ||   // most accurate (your screen)
+          child.name.toLowerCase().includes("screen") ||
+          child.name.toLowerCase().includes("monitor")
+        )
+      ) {
+        child.material.map = texture
         child.material.emissive = new THREE.Color(0xffffff)
+        child.material.emissiveMap = texture
         child.material.emissiveIntensity = 1.5
       }
-    })
-  }, [computer])
+    }
+  })
+}, [computer])
+   
 
   return (
     <mesh>
