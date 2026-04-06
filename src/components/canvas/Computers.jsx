@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useState } from 'react'
 import * as THREE from 'three'
 import CanvasLoader from '../Loader'
 
-// 🔥 preload (keep this here)
+// 🔥 preload
 useGLTF.preload('/desktop_pc/scene.gltf')
 
 function Computers() {
@@ -26,17 +26,23 @@ function Computers() {
     }
   }, [])
 
-  const computer = useGLTF('/desktop_pc/scene.gltf')
+  // 🔥 FIX: correct texture path resolution for Vercel
+  useEffect(() => {
+    THREE.DefaultLoadingManager.setURLModifier((url) => {
+      if (url.startsWith('textures/')) {
+        return '/desktop_pc/' + url
+      }
+      return url
+    })
+  }, [])
 
-  // 🔥 FIX: apply screen texture AFTER model loads
-  
-    
+  const computer = useGLTF('/desktop_pc/scene.gltf')
 
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black'/>
       
-      {/* 🔥 reduce intensity */}
+      {/* stable lighting */}
       <pointLight intensity={2}/>
       
       <spotLight
