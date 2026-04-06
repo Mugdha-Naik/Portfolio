@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import{
   Decal, Float, OrbitControls, Preload, useTexture
   } from '@react-three/drei'
@@ -12,6 +12,18 @@ function Ball(props) {
   // Provide a fallback image if props.imgUrl is missing
   const imgUrl = props.imgUrl || '/fallback.png'; // Make sure fallback.png exists in public/assets
   const [decal] = useTexture([props.imgUrl]); // props.imgUrl = "/tech/html.png"
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaQueryChange = (e) => setIsMobile(e.matches);
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    return () => mediaQuery.removeEventListener('change', handleMediaQueryChange);
+  }, []);
 
   return (
     <Float speed={.75} rotationIntensity={1} floatIntensity={2}>
