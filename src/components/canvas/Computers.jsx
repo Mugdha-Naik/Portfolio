@@ -29,32 +29,33 @@ function Computers() {
   const computer = useGLTF('/desktop_pc/scene.gltf')
 
   // 🔥 FIX: apply screen texture AFTER model loads
-  useEffect(() => {
-  const texture = new THREE.TextureLoader().load(
+  
+    useEffect(() => {
+  const textureLoader = new THREE.TextureLoader()
+
+  const screenTexture = textureLoader.load(
     '/desktop_pc/textures/Material.074_9_emissive.png'
   )
 
-  computer.scene.traverse((child) => {
-    if (child.isMesh) {
+  screenTexture.flipY = false   // ⚠️ VERY IMPORTANT for GLTF
+  screenTexture.encoding = THREE.sRGBEncoding
 
-      // 🔥 ONLY apply to screen-like meshes
-      if (
-        child.material &&
-        (
-          child.material.name.includes("074_9") ||   // most accurate (your screen)
-          child.name.toLowerCase().includes("screen") ||
-          child.name.toLowerCase().includes("monitor")
-        )
-      ) {
-        child.material.map = texture
+  computer.scene.traverse((child) => {
+    if (child.isMesh && child.material) {
+
+      // 🎯 STRICT MATCH (your actual screen material)
+      if (child.material.name === "Material.074_9") {
+
+        child.material.map = screenTexture
+        child.material.emissiveMap = screenTexture
         child.material.emissive = new THREE.Color(0xffffff)
-        child.material.emissiveMap = texture
-        child.material.emissiveIntensity = 1.5
+        child.material.emissiveIntensity = 2
+
+        child.material.needsUpdate = true   // 🔥 critical
       }
     }
   })
 }, [computer])
-   
 
   return (
     <mesh>
