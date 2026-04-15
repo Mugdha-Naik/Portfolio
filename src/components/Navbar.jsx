@@ -42,7 +42,7 @@ function Navbar() {
           />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Mugdha  &nbsp;
-            <span className='sm:block hidden'> | Frontend Developer</span>
+            <span className='sm:block hidden'> | Full-stack Developer</span>
 
           </p>
         </Link>

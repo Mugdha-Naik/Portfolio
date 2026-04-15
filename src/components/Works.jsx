@@ -70,14 +70,18 @@ function Works() {
             variants={fadeIn('','', 0.1, 1)}
                             /* (no direction, no time, delay, duration) */
 
-                            className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>Bringing ideas to life — one render at a time.
-                            I build intuitive, responsive UIs that mount fast, 
-                            pass clean props, and route smoothly. Whether it's 
-                            managing state, handling side effects, or keeping 
-                            components reusable and lean, I love creating frontend 
-                            experiences that just work. Currently seeking a React 
-                            internship to write meaningful code, learn from real-world 
-                            projects, and grow with every re-render.
+                            className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+                              My projects focus on building practical, end-to-end solutions 
+                              that solve real-world problems. I have developed applications 
+                              using the MERN stack and Next.js, working on features like 
+                              authentication, API integration, and dynamic data handling. 
+
+                              I also actively participate in hackathons, where I collaborate 
+                              in team environments to rapidly prototype and deliver 
+                              functional solutions under tight deadlines. As a finalist in 
+                              the Smart India Hackathon, I gained experience in 
+                              problem-solving, teamwork, and building scalable ideas within 
+                              constrained timeframes.
         </motion.p>
       </div>
 

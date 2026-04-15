@@ -9,10 +9,13 @@ import {
     git,
     appwrite,
     currencyConvertorPortfolio,
-    blogPortfolio,
+    jansehatImg,
+    settleSmartPortfolio,
+    VictusImg,
     passwordGeneratorPortfolio,
     AutoCompletePortfolio,
     Todo,
+    iitDhanbadImg,
     threejs,
     mysql,
     python,
@@ -38,7 +41,7 @@ import {
   
   const services = [
     {
-      title: "Front End Developer",
+      title: "Full Stack Developer",
       icon: web,
     },
     {
@@ -104,9 +107,9 @@ import {
     {
       title: "Coordinator of Coding Club",
       company_name: "Codigo Plataforma",
-      
       iconBg: "#383E56",
       date: "August 2024 - Present",
+      link: "https://www.linkedin.com/company/codigo-plataforma/",
       points: [
         "I am Coordinator of the coding club of our college.",
         "I have been volunteering in different coding events.",
@@ -114,32 +117,32 @@ import {
         "Learned about managing studies and also maintaing my presence on the club.",
       ],
     },
+{
+  title: "Full-Stack Developer",
+  company_name: "Development",
+ 
+  iconBg: "#E6DEDD",
+  
+  points: [
+    "Developing full-stack web applications using React.js, Next.js, and Node.js.",
+    "Designing and integrating REST APIs with MongoDB for efficient data management.",
+    "Building responsive, user-centric interfaces with Tailwind CSS.",
+    "Implementing authentication, state management, and scalable backend logic.",
+    "Continuously learning and applying new technologies to improve performance and usability.",
+  ],
+},
     {
-      title: "Front-End Developer",
-      company_name: "Development",
-     
-      iconBg: "#E6DEDD",
-      
-      points: [
-        "Developing websites using React.js.",
-        "Learning new skills everyday to make the websites user friendly and responsive.",
-        "In a search of finding Internship to showcase my skills.",
-        "Ready to learn and grow with the Organization I work with.",
-      ],
-    },
-    {
-      title: "Hackathons",
-      company_name: "participated in 2 hackathons",
-      
-      iconBg: "#383E56",
-      
-      points: [
-        "Participated in 2 Hackathons by far.",
-        "Worked with the frontend part of the hackathon to make it dynamic and beautiful.",
-        "Learned about Teamwork and Time management skills.",
-        "Been open to new world problem statements.",
-      ],
-    },
+  title: "Hackathons",
+  company_name: "SIH, IIT Bhubaneswar (Code Relay 2.0), IIT Dhanbad (HackFest'25)",
+  
+  iconBg: "#383E56",
+  
+  points: [
+    "Selected as a Grand Finalist in Smart India Hackathon (SIH), working on a real-world problem statement and building a scalable solution in a competitive national-level environment.",
+    "Also participated in Code Relay 2.0 (IIT Bhubaneswar) and HackFest'25 (IIT Dhanbad), contributing to frontend and full-stack development.",
+
+  ],
+}
     
   ];
   
@@ -172,118 +175,187 @@ import {
   
   const projects = [
     {
-      name: "Blog Website",
-      description:"A full-stack blogging platform built with React, Redux, Tailwind CSS, and Appwrite. Features include user authentication, post creation with image uploads, post editing and deleting.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "redux",
-          color: "green-text-gradient",
-        },
-        {
-          name: "react router",
-          color: "text-yellow-400",
-        },
-        {
-          name: "tailwindcss",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "appwrite",
-          color: "text-violet-400"
-        }
-      ],
-      image: blogPortfolio,
-      source_code_link: "https://github.com/Mugdha-Naik/Blog-Project-React-.git",
+  name: "JanSehat",
+  description:
+    "A full-stack healthcare platform developed during the Smart India Hackathon to improve access to medical resources and awareness. It enables users to discover nearby healthcare services, access reliable health information, and navigate essential resources through an intuitive and accessible interface.",
+  
+  tags: [
+    {
+      name: "react",
+      color: "blue-text-gradient",
     },
+    {
+      name: "node.js",
+      color: "green-text-gradient",
+    },
+    {
+      name: "express",
+      color: "text-yellow-400",
+    },
+    {
+      name: "mongodb",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "tailwindcss",
+      color: "text-violet-400",
+    },
+  ],
 
-    {
-      name: "Currency Convertor",
-      description:
-        "A responsive React app for real-time currency conversion. Users can select currencies, enter amounts, and instantly see converted values using live exchange rates. Features a modern UI with Tailwind CSS and a convenient swap function.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "fetch API",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwindcss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: currencyConvertorPortfolio,
-      source_code_link: "https://github.com/Mugdha-Naik/Currency-Convertor-React-.git",
-    },
-    {
-      name: "Todo Website",
-      description:
-        "A modern todo list application built with React and Context API. Features include adding, editing, deleting, and marking tasks as complete, with persistent storage using localStorage.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Context API",
-          color: "green-text-gradient",
-        },
-        {
-          name: "react router",
-          color: "text-yellow-400",
-        },
-        {
-          name: "tailwindcss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: Todo,
-      source_code_link: "https://github.com/Mugdha-Naik/Todo-React-.git",
-    },
-    {
-      name: "Password Generator",
-      description: "A responsive React app that creates secure, customizable passwords. Users can set password length, include numbers and special characters, and copy passwords with one click.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        
-        {
-          name: "tailwindcss",
-          color:"pink-text-gradient",
-        },
-      ],
-      image: passwordGeneratorPortfolio,
-      source_code_link: "https://github.com/Mugdha-Naik/Password-Generator-React-.git",
-    },
-    {
-      name: "AutoComplete SearchBar",
-      description: "A modern React.js application featuring an autocomplete search bar for recipes. The app fetches data from the DummyJSON API with debounced input and caching for performance.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "fetch API",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwindcss",
-          color:"pink-text-gradient",
-        },
-      ],
-      image: AutoCompletePortfolio,
-      source_code_link: "https://github.com/Mugdha-Naik/AutoComplete-SearchBar-React-.git"
+  image: jansehatImg,
+  source_code_link: "https://github.com/Mugdha-Naik/Jansehat.git",
+},
 
-    }
+{
+  name: "SettleSmart – Group Expense Manager",
+  description:
+    "A full-stack web app for managing group expenses with automated settlements and a reputation system. Users can create groups, add and split expenses, track UPI/cash payments, and upload receipts with AI-assisted validation. Built with a ledger-based approach to ensure accurate and consistent settlements.",
+  tags: [
+    {
+      name: "next.js",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "react",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "typescript",
+      color: "green-text-gradient",
+    },
+    {
+      name: "mongodb",
+      color: "green-text-gradient",
+    },
+    {
+      name: "nextauth",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "tailwindcss",
+      color: "pink-text-gradient",
+    },
+    { name: "AI/OCR", color: "yellow-text-gradient" }
+  ],
+  image: settleSmartPortfolio, // replace with your actual image variable
+  source_code_link: "https://github.com/your-username/settlesmart",
+},
+    {
+  name: "Sentivent – AI-Powered Sentiment Analysis Platform",
+
+  description:
+    "A full-stack AI-driven sentiment analysis platform that processes customer feedback and social media data in real time. Integrates machine learning-based sentiment classification, rule-based issue detection, and Gemini AI to generate actionable insights, prioritize issues, and visualize trends through an interactive dashboard.",
+
+  tags: [
+    {
+      name: "react",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "tailwindcss",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "nodejs",
+      color: "green-text-gradient",
+    },
+    {
+      name: "express",
+      color: "text-yellow-400",
+    },
+    {
+      name: "mongodb",
+      color: "text-violet-400",
+    },
+    {
+      name: "chartjs",
+      color: "text-cyan-400",
+    },
+    {
+      name: "gemini-ai",
+      color: "text-indigo-400",
+    },
+    {
+      name: "nltk",
+      color: "text-orange-400",
+    },
+    {
+      name: "machine-learning",
+      color: "text-red-400",
+    },
+    {
+      name: "tf-idf",
+      color: "text-emerald-400",
+    },
+  ],
+
+  image: iitDhanbadImg, // replace with your image import
+
+  source_code_link: "https://github.com/Mugdha-Naik/Hackfest25.git",
+},
+    {
+  name: "Sentivent -  Decentralized AI Training Platform",
+
+  description:
+    "A verifiable distributed AI training platform that leverages decentralized computing to parallelize machine learning workloads across independent nodes. Integrates Zero-Knowledge cryptography for trustless verification and smart contracts to automate reward distribution, creating a scalable and self-sustaining AI ecosystem.",
+
+  tags: [
+    {
+      name: "nextjs",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "react",
+      color: "green-text-gradient",
+    },
+    {
+      name: "typescript",
+      color: "text-yellow-400",
+    },
+    {
+      name: "tailwindcss",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "nodejs",
+      color: "text-violet-400",
+    },
+    {
+      name: "socket.io",
+      color: "text-cyan-400",
+    },
+    {
+      name: "python",
+      color: "text-orange-400",
+    },
+    {
+      name: "pytorch",
+      color: "text-red-400",
+    },
+    {
+      name: "solidity",
+      color: "text-indigo-400",
+    },
+    {
+      name: "ethers.js",
+      color: "text-emerald-400",
+    },
+    {
+      name: "hardhat",
+      color: "text-amber-400",
+    },
+    {
+      name: "zk-cryptography",
+      color: "text-purple-400",
+    },
+  ],
+
+  image: VictusImg, // replace with your actual image import
+
+  source_code_link: "https://github.com/Mugdha-Naik/Victus.git",
+},
+    
+
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies , experiences, testimonials, projects };

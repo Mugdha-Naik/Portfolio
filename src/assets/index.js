@@ -27,6 +27,10 @@ import blogPortfolio from "./blogPortfolio.png";
 import Todo from "./Todo.png";
 import passwordGeneratorPortfolio from './passwordGeneratorPortfolio.png'
 import AutoCompletePortfolio from './AutoCompletePortfolio.png'
+import jansehatImg  from "./jansehatImg.png"
+import iitDhanbadImg from "./iitDhanbadImg.jpeg"
+import VictusImg from "./VictusImg.jpeg"
+import settleSmartPortfolio from "./settleSmartPortfolio.png"
 
 export {
   logo,
@@ -50,9 +54,13 @@ export {
   Todo,
   appwrite,
   C,
+  iitDhanbadImg,
   java,
   python,
   mysql,
   passwordGeneratorPortfolio,
   AutoCompletePortfolio,
+  jansehatImg,
+  settleSmartPortfolio,
+  VictusImg,
 };

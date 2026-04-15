@@ -46,14 +46,17 @@ function About() {
                   variants={fadeIn("", "", 0.1, 1)}>
                                   {/* direction, time, delay, duration of animation */}
 
-                                  Bringing ideas to life — one render at a time.
-                                  I build intuitive, responsive UIs that mount fast, 
-                                  pass clean props, and route smoothly. Whether it’s 
-                                  managing state, handling side effects, or keeping 
-                                  components reusable and lean, I love creating frontend 
-                                  experiences that just work. Currently seeking a React 
-                                  internship to write meaningful code, learn from real-world 
-                                  projects, and grow with every re-render.
+                                  Bringing ideas to life — one build at a time. I develop 
+                                  full-stack web applications that are fast, scalable, and 
+                                  intuitive to use. From crafting responsive, high-performance 
+                                  UIs to designing efficient backend APIs, I work across the 
+                                  MERN stack and Next.js to deliver seamless, end-to-end 
+                                  experiences. Whether it’s managing state, handling side 
+                                  effects, or building clean, reusable backend logic, I 
+                                  focus on writing code that is maintainable, structured, and 
+                                  reliable. Currently seeking a full-stack internship to 
+                                  contribute to real-world projects and grow through hands-on 
+                                  development.
         </motion.p>
 
         <div className='mt-20 flex flex-wrap gap-10 justify-evenly'>

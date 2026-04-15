@@ -10,6 +10,7 @@ import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 
 
+
 export {
   Hero,
   Navbar,
@@ -23,5 +24,6 @@ export {
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
-  StarsCanvas
+  StarsCanvas,
+  
 };
