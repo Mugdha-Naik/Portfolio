@@ -26,15 +26,7 @@ function Computers() {
     }
   }, [])
 
-  // 🔥 FIX: correct texture path resolution for Vercel
-  useEffect(() => {
-    THREE.DefaultLoadingManager.setURLModifier((url) => {
-      if (url.startsWith('textures/')) {
-        return '/desktop_pc/' + url
-      }
-      return url
-    })
-  }, [])
+  // No need for setURLModifier if textures are in public/desktop_pc/textures/
 
   const computer = useGLTF('/desktop_pc/scene.gltf')
 
